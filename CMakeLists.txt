@@ -1,5 +1,5 @@
 cmake_minimum_required( VERSION 2.8 )
-project( pulsar_cpp )
+project(pulsar_cpp)
 set( VERSION_NUMBER "0.0.1" )
 
 if( "${CMAKE_BUILD_TYPE}" STREQUAL "Release" )
@@ -8,6 +8,6 @@ else()
     set( VERSION "${VERSION_NUMBER}-debug" )
 endif()
 
-set( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -std=c++11 -Wl,--no-as-needed -O3" )
+set( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -std=c++11 -O3" )
 include_directories( include )
 add_subdirectory( src )
